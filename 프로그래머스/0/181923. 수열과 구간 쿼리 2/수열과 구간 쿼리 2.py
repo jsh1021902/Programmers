@@ -6,8 +6,6 @@ def solution(arr, queries):
         for i in range(query[0], query[1] + 1):
             if arr[i] > query[2]:
                 answer.append(arr[i])
-        try:
-            result.append(min(answer))
-        except:
-            result.append(-1)
+        result.append(-1 if not answer else min(answer))
+        
     return result
